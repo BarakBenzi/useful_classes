@@ -7,7 +7,7 @@ class IfExistsDict(dict):
 
 
 class IfNotBlacklistDict(IfExistsDict):
-    def __init__(self, blacklist):
+    def __init__(self, blacklist=[None]):
         super().__init__(self)
         self.blacklist = blacklist if isinstance(blacklist, list) else [blacklist]
 
