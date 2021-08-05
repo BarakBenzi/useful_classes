@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='useful_classes',
-    version='0.1.3',
+    version='0.1.4',
     author="Benzi",
     author_email="BarakBenZion@gmail.com",
     description="A bundle of useful python classes",
