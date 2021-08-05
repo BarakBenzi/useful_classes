@@ -16,3 +16,15 @@ class IfNotBlacklistDict(IfExistsDict):
             return super().__getitem__(item)
         else:
             return IfNotBlacklistDict(self.blacklist)
+
+
+class SafeExtractDict(dict):
+    def __init__(self, empty_value=None):
+        super().__init__()
+        self.empty_value = empty_value
+
+    def __getitem__(self, item):
+        if item in self.keys():
+            return super().__getitem__(item)
+        else:
+            return self.empty_value
