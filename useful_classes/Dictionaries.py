@@ -1,5 +1,7 @@
 class IfExistsDict(dict):
     def __init__(self, not_exists_type='IfExistsDict'):
+        super(IfExistsDict).__init__()
+
         self._type = not_exists_type
 
     def __getitem__(self, item, **kwargs):
